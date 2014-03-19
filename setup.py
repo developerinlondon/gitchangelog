@@ -4,7 +4,7 @@ import glob
 
 import sys, os.path
 ## Ensure that ``./autogen.sh`` is run prior to using ``setup.py``
-if "%%short-version%%".startswith("%%"):
+if "2.0.0".startswith("%%"):
     import os, subprocess
     if not os.path.exists('./autogen.sh'):
         sys.stderr.write(
@@ -49,7 +49,7 @@ for scheme in INSTALL_SCHEMES.values():
 
 setup(
     name='gitchangelog',
-    version='%%version%%',
+    version='2.0.0.1dev_r201309212000',
     description='gitchangelog generates a changelog thanks to git log.',
     data_files=[
       ('templates/mustache', glob.glob("templates/mustache/*.tpl")),
